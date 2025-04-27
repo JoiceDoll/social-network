@@ -13,6 +13,7 @@ type FormValues = {
 
 const SignUp: React.FC = () => {
   const navigate = useNavigate();
+  const [username, setUsername] = React.useState<string>("");
   const {
     register,
     handleSubmit,
@@ -58,6 +59,7 @@ const SignUp: React.FC = () => {
             id="username"
             label="Please enter your username"
             {...register("username")}
+            onChange={(e) => setUsername(e.target.value)}
           />
           {errors.username && (
             <p className="text-red-500 text-[0.8rem]">
@@ -67,6 +69,7 @@ const SignUp: React.FC = () => {
         </div>
         <div className="w-full flex justify-center md:justify-end">
           <Button
+            disabled={!username}
             type="submit"
             className="bg-primary w-full md:w-[111px] h-[37px] md:h-[32px] rounded-[8px] text-white"
           >
