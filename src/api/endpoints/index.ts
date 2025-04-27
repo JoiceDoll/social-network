@@ -1,0 +1,1 @@
+export { default as POSTS } from "./posts.endpoint";

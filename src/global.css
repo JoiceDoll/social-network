@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 976px;
+  --breakpoint-xl: 1800px;
+  --breakpoint-xxl: 2300px;
+  --color-primary: #7695ec;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray: #777777;
+  --color-inputText: #cccccc;
+  --color-deleteBtn: #ff5151;
+  --color-hover-deleteBtn: #fa3e3e;
+  --color-saveBtn: #47b960;
+  --color-hover-saveBtn: #2db34a;
+  --color-modalBorder: #999999;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0px;
+  color: #4b4848;
+  --type-first: "Roboto", Arial, sans-serif;
+  font-family: var(--type-first);
+  background-color: #dddddd;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  display: block;
+  font-size: 1rem;
+  font-family: var(--type-first);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+  padding: 0px;
+}
