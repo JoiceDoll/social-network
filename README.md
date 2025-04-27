@@ -9,6 +9,10 @@ O usuário criar uma conta apenas com um nome de usuário.
 Criar, listar, editar e excluir posts.
 
 ## Como Rodar o Projeto
+Acesse: https://social-network-five-livid.vercel.app/
+
+ou 
+
 1. Clone o Repositório;
 2. Instale os pacotes utilizando npm install;
 3. Rode o projeto utilizando npm run dev;
