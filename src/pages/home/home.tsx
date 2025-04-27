@@ -12,8 +12,13 @@ const Home = () => {
   const username = users.length > 0 ? users[0].username : null;
   const navigate = useNavigate();
   const [currentUrl, setCurrentUrl] = useState<string | undefined>(undefined);
-
   const { data, refetch, isLoading } = useListPosts(currentUrl);
+
+  React.useEffect(() => {
+    if (!username) {
+      navigate("/login");
+    }
+  }, [username, navigate]);
 
   if (error) {
     return <p>Error: {error}</p>;
