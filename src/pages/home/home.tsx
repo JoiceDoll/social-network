@@ -14,12 +14,6 @@ const Home = () => {
   const [currentUrl, setCurrentUrl] = useState<string | undefined>(undefined);
   const { data, refetch, isLoading } = useListPosts(currentUrl);
 
-  React.useEffect(() => {
-    if (!username) {
-      navigate("/login");
-    }
-  }, [username, navigate]);
-
   if (error) {
     return <p>Error: {error}</p>;
   }
@@ -39,6 +33,17 @@ const Home = () => {
     clearStore();
     navigate("/login");
   };
+
+  React.useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (users && users.length === 0) {
+        console.log(users);
+        navigate("/login");
+      }
+    }, 1000);
+
+    return () => clearTimeout(timeout);
+  }, [users, navigate]);
 
   return (
     <div className="fixed inset-0 flex justify-center items-center z-50">
