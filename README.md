@@ -1,4 +1,4 @@
-# CodeLeap Network
+#Network
 Este é um projeto de uma aplicação web para gerenciar posts, desenvolvido com React + Vite, TypeScript e React Query.
 A aplicação permite criar, listar, editar e excluir posts, com suporte a paginação e carregamento lazy para modais.
 
